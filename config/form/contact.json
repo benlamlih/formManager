@@ -4,14 +4,17 @@
     "fields": [
       {
         "name": "lastname",
+        "label": "Nom",
         "type": "text"
       },
       {
         "name": "firstname",
+        "label": "Prénom",
         "type": "text"
       },
       {
         "name": "subject",
+        "label": "Sujet",
         "type": "select",
         "values": [
           {
@@ -30,11 +33,18 @@
       },
       {
         "name": "message",
+        "label": "Message",
         "type": "textarea"
       },
       {
         "name": "cgu",
+        "label": "J'accepte les conditions générales",
         "type": "checkbox"
+      },
+      {
+        "name": "submit",
+        "type": "submit",
+        "text": "Envoyer"
       }
     ]
   }
