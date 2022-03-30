@@ -1,0 +1,41 @@
+{
+  "form": {
+    "name": "contact",
+    "fields": [
+      {
+        "name": "lastname",
+        "type": "text"
+      },
+      {
+        "name": "firstname",
+        "type": "text"
+      },
+      {
+        "name": "subject",
+        "type": "select",
+        "values": [
+          {
+            "text": "Question générale",
+            "value": "question"
+          },
+          {
+            "text": "Réclamation",
+            "value": "claim"
+          },
+          {
+            "text": "Autre",
+            "value": "other"
+          }
+        ]
+      },
+      {
+        "name": "message",
+        "type": "textarea"
+      },
+      {
+        "name": "cgu",
+        "type": "checkbox"
+      }
+    ]
+  }
+}

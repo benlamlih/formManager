@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+    php:
+        build:
+            context: ./docker/php
+            dockerfile: Dockerfile
+        volumes:
+            - ./:/var/www/app
+    nginx:
+        build: ./docker/nginx
+        volumes:
+            - ./public:/var/www/app/public
+        depends_on:
+            - php
+        ports:
+            - "80:80"
