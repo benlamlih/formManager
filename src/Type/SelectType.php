@@ -1,7 +1,7 @@
 <?php
-class SelectType
+class SelectType implements TypeInterface
 {
-    public function buidView(object $field): string
+    public function build(object $field): string
     {
         $template = '<select name="'.$field->name.'" id="'.$field->name.'">';
 

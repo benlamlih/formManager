@@ -40,6 +40,10 @@ class FormGenerator
         }
 
         $type = new $className();
+        if(!$type instanceof TypeInterface){
+            throw new Exception(sprintf("Field type '%s' doesn't implement TypeInterface", $field->type));
+        }
+
         $template .= $type->build($field);
 
         $template .= '</div>';
