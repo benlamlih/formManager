@@ -1,8 +1,8 @@
 <?php
-class TextType
+class TextType implements TypeInterface
 {
-    public function build()
+    public function build(object $field): string
     {
-
+        return '<input type="text" id="'.$field->name.'" name="'.$field->name.'">';
     }
 }

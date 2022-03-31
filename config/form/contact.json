@@ -13,6 +13,11 @@
         "type": "text"
       },
       {
+        "name": "email",
+        "label": "Adresse e-mail",
+        "type": "email"
+      },
+      {
         "name": "subject",
         "label": "Sujet",
         "type": "select",
