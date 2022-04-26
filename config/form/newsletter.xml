@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<form>
+    <fields>
+        <field>
+            <name>email</name>
+            <type>email</type>
+            <label>Adresse e-mail</label>
+        </field>
+        <field>
+            <name>type</name>
+            <type>select</type>
+            <label>A quelle fréquence ?</label>
+            <values>
+                <value>
+                    <text>Quotidienne</text>
+                    <value>daily</value>
+                </value>
+                <value>
+                    <text>Hebdomadaire</text>
+                    <value>weekly</value>
+                </value>
+                <value>
+                    <text>Mensuelle</text>
+                    <value>monthly</value>
+                </value>
+            </values>
+        </field>
+    </fields>
+</form>
