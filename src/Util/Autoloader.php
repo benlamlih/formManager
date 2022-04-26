@@ -1,4 +1,6 @@
 <?php
+namespace App\Util;
+
 class Autoloader
 {
     public static function register()
@@ -8,17 +10,9 @@ class Autoloader
 
     public static function load($class)
     {
-        $iterator = new RecursiveDirectoryIterator('../src/');
-        while($iterator->current()){
-            $folder = $iterator->current();
-
-            $path = sprintf('../src/%s/%s.php', $folder->getPathname(), $class);
-            if(file_exists($path)){
-                require_once $path;
-                return;
-            }
-
-            $iterator->next();
-        }
+        $classpath = sprintf('../%s.php', $class);
+        $classpath = str_replace('App', 'src', $classpath);
+        $classpath = str_replace('\\', '/', $classpath);
+        require_once $classpath;
     }
 }

@@ -1,4 +1,9 @@
 <?php
+namespace App;
+
+use App\Type\TypeInterface;
+use Exception;
+
 class FormGenerator
 {
     public function build(string $type): string
@@ -34,7 +39,7 @@ class FormGenerator
             $template .= '<label for="'.$field->name.'">'.$field->label.'</label>';
         }
 
-        $className = sprintf('%sType', ucfirst($field->type));
+        $className = sprintf('App\Type\%sType', ucfirst($field->type));
         if(!class_exists($className)){
             throw new Exception(sprintf("Field type '%s' doesn't exist", $field->type));
         }

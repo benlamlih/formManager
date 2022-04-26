@@ -1,4 +1,6 @@
 <?php
+namespace App\Type;
+
 class CheckboxType implements TypeInterface
 {
     public function build(object $field): string
