@@ -6,7 +6,7 @@ use App\Util\Autoloader;
 
 Autoloader::register();
 
-$generator = new FormGenerator();
+$generator = FormGenerator::get();
 $formView = $generator->build('contact');
 
 echo $formView;

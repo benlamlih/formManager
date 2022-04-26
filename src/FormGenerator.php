@@ -2,9 +2,10 @@
 namespace App;
 
 use App\Type\TypeInterface;
+use App\Util\AbstractService;
 use Exception;
 
-class FormGenerator
+final class FormGenerator extends AbstractService
 {
     public function build(string $type): string
     {
