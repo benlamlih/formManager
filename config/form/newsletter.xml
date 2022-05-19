@@ -1,29 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<form>
-    <fields>
-        <field>
+<document>
+    <form>
+        <fields>
             <name>email</name>
             <type>email</type>
             <label>Adresse e-mail</label>
-        </field>
-        <field>
+        </fields>
+        <fields>
             <name>type</name>
             <type>select</type>
             <label>A quelle fréquence ?</label>
             <values>
-                <value>
-                    <text>Quotidienne</text>
-                    <value>daily</value>
-                </value>
-                <value>
-                    <text>Hebdomadaire</text>
-                    <value>weekly</value>
-                </value>
-                <value>
-                    <text>Mensuelle</text>
-                    <value>monthly</value>
-                </value>
+                <text>Quotidienne</text>
+                <value>daily</value>
             </values>
-        </field>
-    </fields>
-</form>
+            <values>
+                <text>Hebdomadaire</text>
+                <value>weekly</value>
+            </values>
+            <values>
+                <text>Mensuelle</text>
+                <value>monthly</value>
+            </values>
+        </fields>
+        <fields>
+            <name>submit</name>
+            <type>submit</type>
+            <text>S'inscrire</text>
+        </fields>
+    </form>
+</document>

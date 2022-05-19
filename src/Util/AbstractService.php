@@ -7,7 +7,7 @@ abstract class AbstractService
 
     protected function __construct(){}
 
-    public static function get(): self
+    public static function get()
     {
         if(!self::$_instance){
             $class = get_called_class();

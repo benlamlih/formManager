@@ -1,23 +1,25 @@
 <?php
 namespace App;
 
+use App\Loader\ConfigurationLoader;
 use App\Type\TypeInterface;
 use App\Util\AbstractService;
 use Exception;
 
 final class FormGenerator extends AbstractService
 {
-    public function build(string $type): string
+    private ConfigurationLoader $configurationLoader;
+
+    protected function __construct()
     {
-        $config = $this->loadConfiguration($type);
-        return $this->buildView($config);
+        parent::__construct();
+        $this->configurationLoader = ConfigurationLoader::get();
     }
 
-    private function loadConfiguration(string $type): object
+    public function build(string $type): string
     {
-        $filename = sprintf('../config/form/%s.json', $type);
-        $raw = file_get_contents($filename);
-        return json_decode($raw);
+        $config = $this->configurationLoader->load($type);
+        return $this->buildView($config);
     }
 
     private function buildView(object $config): string
