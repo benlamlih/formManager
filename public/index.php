@@ -7,6 +7,6 @@ use App\Util\Autoloader;
 Autoloader::register();
 
 $generator = FormGenerator::get();
-$formView = $generator->build('newsletter');
+$formView = $generator->build('sample');
 
 echo $formView;

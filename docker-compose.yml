@@ -14,4 +14,4 @@ services:
         depends_on:
             - php
         ports:
-            - "80:80"
+            - "85:80"
