@@ -1,6 +1,7 @@
 {
   "form": {
     "name": "contact",
+    "save": "csv",
     "fields": [
       {
         "name": "lastname",

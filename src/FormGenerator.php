@@ -24,7 +24,7 @@ final class FormGenerator extends AbstractService
 
     private function buildView(object $config): string
     {
-        $template = '<form>';
+        $template = '<form method=POST>';
 
         foreach ($config->form->fields as $field) {
             $template .= $this->buildFieldView($field);
