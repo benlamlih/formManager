@@ -1,10 +1,13 @@
 <?php
 namespace App\Type;
 
-class TextareaType implements TypeInterface
+class TextareaType extends InputType implements TypeInterface
 {
+    public string $attributes;
+
     public function build(object $field): string
     {
-        return '<textarea name="'.$field->name.'" id="'.$field->name.'"></textarea>';
+        $this->attributes = parent::getAttributes($field);
+        return '<textarea name="'.$field->name.'" id="'.$field->name. ' ' . $this->attributes . '"></textarea>';
     }
 }

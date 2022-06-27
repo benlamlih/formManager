@@ -5,7 +5,15 @@
       {
         "name": "lastname",
         "label": "Nom",
-        "type": "text"
+        "type": "text",
+        "constraints": {
+          "required": 1,
+          "alphanumeric": 1,
+          "length": {
+            "min": 4,
+            "max": 8
+          }
+        }
       },
       {
         "name": "firstname",

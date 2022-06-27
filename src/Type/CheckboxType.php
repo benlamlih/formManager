@@ -1,10 +1,13 @@
 <?php
 namespace App\Type;
 
-class CheckboxType implements TypeInterface
+class CheckboxType extends InputType implements TypeInterface
 {
+    public string $attributes;
+
     public function build(object $field): string
     {
-        return '<input type="checkbox" name="'.$field->name.'" id="'.$field->name.'">';
+        $this->attributes = parent::getAttributes($field);
+        return '<input type="checkbox" name="'.$field->name.'" id="'.$field->name. '" ' . $this->attributes .'>';
     }
 }

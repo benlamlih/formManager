@@ -1,6 +1,7 @@
 <?php
 namespace App\Loader;
 
+// TODO: Add yaml installation in docker or Apache Web server
 class YamlLoader implements LoaderInterface
 {
     public static function load(string $path): object

@@ -1,10 +1,13 @@
 <?php
 namespace App\Type;
 
-class TextType implements TypeInterface
+class TextType extends InputType implements TypeInterface
 {
+    public string $attributes;
+
     public function build(object $field): string
     {
-        return '<input type="text" id="'.$field->name.'" name="'.$field->name.'">';
+        $this->attributes = parent::getAttributes($field);
+        return '<input type="text" id="'.$field->name.'" name="'.$field->name.'" id="'.$field->name. '" ' . $this->attributes .'>';
     }
 }
