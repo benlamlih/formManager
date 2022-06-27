@@ -1,7 +1,7 @@
 <?php
 namespace App\Type;
 
-class TextareaType extends InputType implements TypeInterface
+class TextareaType extends TypingInputType implements TypeInterface
 {
     public string $attributes;
 

@@ -29,6 +29,9 @@
         "name": "subject",
         "label": "Sujet",
         "type": "select",
+        "constraints": {
+          "required": 1
+        },
         "values": [
           {
             "text": "Question générale",
@@ -52,7 +55,10 @@
       {
         "name": "cgu",
         "label": "J'accepte les conditions générales",
-        "type": "checkbox"
+        "type": "checkbox",
+        "constraints": {
+          "required": 1
+        }
       },
       {
         "name": "submit",

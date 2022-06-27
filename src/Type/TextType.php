@@ -1,7 +1,7 @@
 <?php
 namespace App\Type;
 
-class TextType extends InputType implements TypeInterface
+class TextType extends TypingInputType implements TypeInterface
 {
     public string $attributes;
 

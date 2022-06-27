@@ -1,7 +1,7 @@
 <?php
 namespace App\Type;
 
-class EmailType implements TypeInterface
+class EmailType extends TypingInputType implements TypeInterface
 {
     public string $attributes;
     public function build(object $field): string

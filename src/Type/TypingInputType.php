@@ -5,9 +5,9 @@ namespace App\Type;
 class TypingInputType extends InputType
 {
 
-    public function getTypingAttributes($field): string
+    public function getAttributes($field): string
     {
-        $attributes = "";
+        $attributes = parent::getAttributes($field);
         if (isset($field->constraints)) {
             if ($field->constraints->alphanumeric == 1){
                 $attributes .= ' pattern="[a-zA-Z0-9\s]+"';
